@@ -78,12 +78,7 @@ describe('ProjectAlertRuleDetails', function() {
           routes={projectAlertRuleDetailsRoutes}
           params={{orgId: 'org-slug', projectId: 'project-slug'}}
         />,
-        {
-          context: {
-            project: TestStubs.Project(),
-            organization: TestStubs.Organization(),
-          },
-        }
+        TestStubs.routerContext()
       );
     });
     it('renders', function() {
@@ -137,12 +132,7 @@ describe('ProjectAlertRuleDetails', function() {
           routes={projectAlertRuleDetailsRoutes}
           params={{orgId: 'org-slug', projectId: 'project-slug', ruleId: '1'}}
         />,
-        {
-          context: {
-            project: TestStubs.Project(),
-            organization: TestStubs.Organization(),
-          },
-        }
+        TestStubs.routerContext()
       );
     });
     it('renders', function() {
