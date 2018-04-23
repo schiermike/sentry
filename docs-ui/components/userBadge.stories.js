@@ -12,6 +12,10 @@ const user = {
 storiesOf('UserBadge', module).add(
   'default',
   withInfo('A standard two-line user badge. It contains a link to the user.')(() => (
-    <UserBadge user={user} />
+    <div>
+      <UserBadge user={user} />
+      <UserBadge user={user} useLink={false} />
+      <UserBadge user={user} hideEmail />
+    </div>
   ))
 );
