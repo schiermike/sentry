@@ -6,6 +6,7 @@ import six
 from six.moves.urllib.parse import parse_qs, urlencode, urlparse
 
 from sentry.integrations.slack import SlackIntegration
+from sentry.integrations.vsts import VSTSIntegration
 from sentry.models import Identity, IdentityProvider, IdentityStatus, Integration, OrganizationIntegration
 from sentry.testutils import IntegrationTestCase
 
@@ -98,3 +99,27 @@ class SlackIntegrationTest(IntegrationTestCase):
             external_id='UXXXXXXX1',
         )
         assert identity.status == IdentityStatus.VALID
+
+
+class VSTSIntegrationTest(IntegrationTestCase):
+    provider = VSTSIntegration
+
+    @responses.activate
+    def test_basic_flow(self):
+        resp = self.client.get(self.path)
+        assert resp.status_code == 302
+        redirect = urlparse(resp['Location'])
+        assert redirect.scheme == 'https'
+        assert redirect.netloc == 'app.vssps.visualstudio.com'
+        assert redirect.path == '/oauth2/authorize'
+        params = parse_qs(redirect.query)
+        assert params['scope'] == [' '.join(self.provider.identity_oauth_scopes)]
+        assert params['state']
+        assert params['redirect_uri'] == ['http://testserver/extensions/vsts/setup/']
+        assert params['response_type'] == ['code']
+        assert params['client_id'] == ['vsts-client-id']
+        # once we've asserted on it, switch to a singular values to make life
+        # easier
+        # authorize_params = {k: v[0] for k, v in six.iteritems(params)}
+
+        # To be continued later.
