@@ -20,6 +20,7 @@ const StyledSelect = styled(ReactSelect)`
   .Select-placeholder,
   .Select--single > .Select-control .Select-value {
     height: 36px;
+    line-height: 36px;
     &:focus {
       border: 1px solid ${p => p.theme.gray};
     }

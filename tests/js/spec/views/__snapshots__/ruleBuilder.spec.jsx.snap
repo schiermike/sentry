@@ -116,7 +116,7 @@ exports[`RuleBuilder render() renders 1`] = `
                   autosize={true}
                   backspaceRemoves={true}
                   backspaceToRemoveMessage="Press backspace to remove {label}"
-                  className="css-16280ey-StyledSelect css-seafkz0"
+                  className="css-16eqlz5-StyledSelect css-12gpum80"
                   clearAllText="Clear all"
                   clearRenderer={[Function]}
                   clearValueText="Clear value"
@@ -173,7 +173,7 @@ exports[`RuleBuilder render() renders 1`] = `
                   valueKey="value"
                 >
                   <div
-                    className="Select css-16280ey-StyledSelect css-seafkz0 has-value is-searchable Select--single"
+                    className="Select css-16eqlz5-StyledSelect css-12gpum80 has-value is-searchable Select--single"
                   >
                     <div
                       className="Select-control"
@@ -467,7 +467,7 @@ exports[`RuleBuilder render() renders 1`] = `
                         autosize={true}
                         backspaceRemoves={true}
                         backspaceToRemoveMessage="Press backspace to remove {label}"
-                        className="css-16280ey-StyledSelect css-seafkz0"
+                        className="css-16eqlz5-StyledSelect css-12gpum80"
                         clearAllText="Clear all"
                         clearRenderer={[Function]}
                         clearValueText="Clear value"
@@ -542,7 +542,7 @@ exports[`RuleBuilder render() renders 1`] = `
                         valueKey="value"
                       >
                         <div
-                          className="Select css-16280ey-StyledSelect css-seafkz0 is-clearable is-searchable Select--multi"
+                          className="Select css-16eqlz5-StyledSelect css-12gpum80 is-clearable is-searchable Select--multi"
                         >
                           <div
                             className="Select-control"
@@ -1061,7 +1061,7 @@ exports[`RuleBuilder renders with suggestions renders 1`] = `
                   autosize={true}
                   backspaceRemoves={true}
                   backspaceToRemoveMessage="Press backspace to remove {label}"
-                  className="css-16280ey-StyledSelect css-seafkz0"
+                  className="css-16eqlz5-StyledSelect css-12gpum80"
                   clearAllText="Clear all"
                   clearRenderer={[Function]}
                   clearValueText="Clear value"
@@ -1118,7 +1118,7 @@ exports[`RuleBuilder renders with suggestions renders 1`] = `
                   valueKey="value"
                 >
                   <div
-                    className="Select css-16280ey-StyledSelect css-seafkz0 has-value is-searchable Select--single"
+                    className="Select css-16eqlz5-StyledSelect css-12gpum80 has-value is-searchable Select--single"
                   >
                     <div
                       className="Select-control"
@@ -1451,7 +1451,7 @@ exports[`RuleBuilder renders with suggestions renders 1`] = `
                         autosize={true}
                         backspaceRemoves={true}
                         backspaceToRemoveMessage="Press backspace to remove {label}"
-                        className="css-16280ey-StyledSelect css-seafkz0"
+                        className="css-16eqlz5-StyledSelect css-12gpum80"
                         clearAllText="Clear all"
                         clearRenderer={[Function]}
                         clearValueText="Clear value"
@@ -1539,7 +1539,7 @@ exports[`RuleBuilder renders with suggestions renders 1`] = `
                         valueKey="value"
                       >
                         <div
-                          className="Select css-16280ey-StyledSelect css-seafkz0 has-value is-clearable is-searchable Select--multi"
+                          className="Select css-16eqlz5-StyledSelect css-12gpum80 has-value is-clearable is-searchable Select--multi"
                         >
                           <div
                             className="Select-control"
