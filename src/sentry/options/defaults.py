@@ -116,3 +116,6 @@ register('cloudflare.secret-key', default='')
 
 # Tagstore
 register('tagstore.multi-sampling', default=0.0)
+
+# GitHubApps
+register('github.webhook-secret', default='')
