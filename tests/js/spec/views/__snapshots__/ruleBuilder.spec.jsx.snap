@@ -227,42 +227,14 @@ exports[`RuleBuilder render() renders 1`] = `
                   value={Array []}
                   valueComponent={[Function]}
                 >
-                  <Select
+                  <Component
                     arrowRenderer={[Function]}
-                    autosize={true}
-                    backspaceRemoves={true}
-                    backspaceToRemoveMessage="Press backspace to remove {label}"
-                    className="css-1yznv6y-MultiSelect css-12eevnk0"
-                    clearAllText="Clear all"
-                    clearRenderer={[Function]}
-                    clearValueText="Clear value"
-                    clearable={true}
-                    closeOnSelect={true}
-                    deleteRemoves={true}
-                    delimiter=","
+                    className="css-1yznv6y-MultiSelect css-sbd3w60"
                     disabled={false}
-                    escapeClearsValue={true}
-                    filterOptions={[Function]}
                     hideErrorMessage={false}
                     id="id-undefined"
-                    ignoreAccents={true}
-                    ignoreCase={true}
-                    inputProps={Object {}}
-                    isLoading={false}
-                    joinValues={false}
-                    labelKey="label"
-                    matchPos="any"
-                    matchProp="any"
-                    menuBuffer={0}
-                    menuRenderer={[Function]}
                     multi={true}
-                    noResultsText="No results found"
-                    onBlurResetsInput={true}
                     onChange={[Function]}
-                    onCloseResetsInput={true}
-                    onSelectResetsInput={true}
-                    openOnClick={true}
-                    optionComponent={[Function]}
                     options={
                       Array [
                         Object {
@@ -287,120 +259,191 @@ exports[`RuleBuilder render() renders 1`] = `
                         },
                       ]
                     }
-                    pageSize={5}
                     placeholder="Add Owners"
-                    removeSelected={true}
                     required={false}
-                    rtl={false}
-                    scrollMenuIntoView={true}
-                    searchable={true}
-                    simpleValue={false}
                     style={
                       Object {
                         "width": 200,
                       }
                     }
-                    tabSelectsValue={true}
-                    trimFilter={true}
                     value={Array []}
                     valueComponent={[Function]}
-                    valueKey="value"
                   >
-                    <div
-                      className="Select css-1yznv6y-MultiSelect css-12eevnk0 is-clearable is-searchable Select--multi"
+                    <Select
+                      arrowRenderer={[Function]}
+                      autosize={true}
+                      backspaceRemoves={true}
+                      backspaceToRemoveMessage="Press backspace to remove {label}"
+                      className="css-1yznv6y-MultiSelect css-sbd3w60"
+                      clearAllText="Clear all"
+                      clearRenderer={[Function]}
+                      clearValueText="Clear value"
+                      clearable={true}
+                      closeOnSelect={true}
+                      deleteRemoves={true}
+                      delimiter=","
+                      disabled={false}
+                      escapeClearsValue={true}
+                      filterOptions={[Function]}
+                      hideErrorMessage={false}
+                      id="id-undefined"
+                      ignoreAccents={true}
+                      ignoreCase={true}
+                      inputProps={Object {}}
+                      isLoading={false}
+                      joinValues={false}
+                      labelKey="label"
+                      matchPos="any"
+                      matchProp="any"
+                      menuBuffer={0}
+                      menuRenderer={[Function]}
+                      multi={true}
+                      noResultsText="No results found"
+                      onBlurResetsInput={true}
+                      onChange={[Function]}
+                      onCloseResetsInput={true}
+                      onSelectResetsInput={true}
+                      openOnClick={true}
+                      optionComponent={[Function]}
+                      options={
+                        Array [
+                          Object {
+                            "actor": Object {
+                              "id": "1",
+                              "name": "Jane Doe",
+                              "type": "user",
+                            },
+                            "label": "Jane Doe",
+                            "searchKey": "janedoe@example.com  Jane Doe",
+                            "value": "user:1",
+                          },
+                          Object {
+                            "actor": Object {
+                              "id": "2",
+                              "name": "John Smith",
+                              "type": "user",
+                            },
+                            "label": "John Smith",
+                            "searchKey": "johnsmith@example.com  John Smith",
+                            "value": "user:2",
+                          },
+                        ]
+                      }
+                      pageSize={5}
+                      placeholder="Add Owners"
+                      removeSelected={true}
+                      required={false}
+                      rtl={false}
+                      scrollMenuIntoView={true}
+                      searchable={true}
+                      simpleValue={false}
+                      style={
+                        Object {
+                          "width": 200,
+                        }
+                      }
+                      tabSelectsValue={true}
+                      trimFilter={true}
+                      value={Array []}
+                      valueComponent={[Function]}
+                      valueKey="value"
                     >
                       <div
-                        className="Select-control"
-                        onKeyDown={[Function]}
-                        onMouseDown={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchMove={[Function]}
-                        onTouchStart={[Function]}
-                        style={
-                          Object {
-                            "width": 200,
-                          }
-                        }
+                        className="Select css-1yznv6y-MultiSelect css-sbd3w60 is-clearable is-searchable Select--multi"
                       >
-                        <span
-                          className="Select-multi-value-wrapper"
-                          id="react-select-2--value"
-                        >
-                          <div
-                            className="Select-placeholder"
-                          >
-                            Add Owners
-                          </div>
-                          <AutosizeInput
-                            aria-activedescendant="react-select-2--value"
-                            aria-expanded="false"
-                            aria-haspopup="false"
-                            aria-owns=""
-                            className="Select-input"
-                            id="id-undefined"
-                            injectStyles={true}
-                            minWidth="5"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onFocus={[Function]}
-                            required={false}
-                            role="combobox"
-                            value=""
-                          >
-                            <div
-                              className="Select-input"
-                              style={
-                                Object {
-                                  "display": "inline-block",
-                                }
-                              }
-                            >
-                              <input
-                                aria-activedescendant="react-select-2--value"
-                                aria-expanded="false"
-                                aria-haspopup="false"
-                                aria-owns=""
-                                id="id-undefined"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                required={false}
-                                role="combobox"
-                                style={
-                                  Object {
-                                    "boxSizing": "content-box",
-                                    "width": "5px",
-                                  }
-                                }
-                                value=""
-                              />
-                              <div
-                                style={
-                                  Object {
-                                    "height": 0,
-                                    "left": 0,
-                                    "overflow": "scroll",
-                                    "position": "absolute",
-                                    "top": 0,
-                                    "visibility": "hidden",
-                                    "whiteSpace": "pre",
-                                  }
-                                }
-                              />
-                            </div>
-                          </AutosizeInput>
-                        </span>
-                        <span
-                          className="Select-arrow-zone"
+                        <div
+                          className="Select-control"
+                          onKeyDown={[Function]}
                           onMouseDown={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          style={
+                            Object {
+                              "width": 200,
+                            }
+                          }
                         >
                           <span
-                            className="icon-arrow-down"
-                          />
-                        </span>
+                            className="Select-multi-value-wrapper"
+                            id="react-select-2--value"
+                          >
+                            <div
+                              className="Select-placeholder"
+                            >
+                              Add Owners
+                            </div>
+                            <AutosizeInput
+                              aria-activedescendant="react-select-2--value"
+                              aria-expanded="false"
+                              aria-haspopup="false"
+                              aria-owns=""
+                              className="Select-input"
+                              id="id-undefined"
+                              injectStyles={true}
+                              minWidth="5"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onFocus={[Function]}
+                              required={false}
+                              role="combobox"
+                              value=""
+                            >
+                              <div
+                                className="Select-input"
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                  }
+                                }
+                              >
+                                <input
+                                  aria-activedescendant="react-select-2--value"
+                                  aria-expanded="false"
+                                  aria-haspopup="false"
+                                  aria-owns=""
+                                  id="id-undefined"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onFocus={[Function]}
+                                  required={false}
+                                  role="combobox"
+                                  style={
+                                    Object {
+                                      "boxSizing": "content-box",
+                                      "width": "5px",
+                                    }
+                                  }
+                                  value=""
+                                />
+                                <div
+                                  style={
+                                    Object {
+                                      "height": 0,
+                                      "left": 0,
+                                      "overflow": "scroll",
+                                      "position": "absolute",
+                                      "top": 0,
+                                      "visibility": "hidden",
+                                      "whiteSpace": "pre",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </AutosizeInput>
+                          </span>
+                          <span
+                            className="Select-arrow-zone"
+                            onMouseDown={[Function]}
+                          >
+                            <span
+                              className="icon-arrow-down"
+                            />
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </Select>
+                    </Select>
+                  </Component>
                 </MultiSelect>
               </MultiSelectField>
             </SelectOwners>
@@ -974,42 +1017,14 @@ exports[`RuleBuilder renders with suggestions renders 1`] = `
                   }
                   valueComponent={[Function]}
                 >
-                  <Select
+                  <Component
                     arrowRenderer={[Function]}
-                    autosize={true}
-                    backspaceRemoves={true}
-                    backspaceToRemoveMessage="Press backspace to remove {label}"
-                    className="css-1yznv6y-MultiSelect css-12eevnk0"
-                    clearAllText="Clear all"
-                    clearRenderer={[Function]}
-                    clearValueText="Clear value"
-                    clearable={true}
-                    closeOnSelect={true}
-                    deleteRemoves={true}
-                    delimiter=","
+                    className="css-1yznv6y-MultiSelect css-sbd3w60"
                     disabled={false}
-                    escapeClearsValue={true}
-                    filterOptions={[Function]}
                     hideErrorMessage={false}
                     id="id-undefined"
-                    ignoreAccents={true}
-                    ignoreCase={true}
-                    inputProps={Object {}}
-                    isLoading={false}
-                    joinValues={false}
-                    labelKey="label"
-                    matchPos="any"
-                    matchProp="any"
-                    menuBuffer={0}
-                    menuRenderer={[Function]}
                     multi={true}
-                    noResultsText="No results found"
-                    onBlurResetsInput={true}
                     onChange={[Function]}
-                    onCloseResetsInput={true}
-                    onSelectResetsInput={true}
-                    openOnClick={true}
-                    optionComponent={[Function]}
                     options={
                       Array [
                         Object {
@@ -1034,21 +1049,13 @@ exports[`RuleBuilder renders with suggestions renders 1`] = `
                         },
                       ]
                     }
-                    pageSize={5}
                     placeholder="Add Owners"
-                    removeSelected={true}
                     required={false}
-                    rtl={false}
-                    scrollMenuIntoView={true}
-                    searchable={true}
-                    simpleValue={false}
                     style={
                       Object {
                         "width": 200,
                       }
                     }
-                    tabSelectsValue={true}
-                    trimFilter={true}
                     value={
                       Array [
                         Object {
@@ -1064,76 +1071,154 @@ exports[`RuleBuilder renders with suggestions renders 1`] = `
                       ]
                     }
                     valueComponent={[Function]}
-                    valueKey="value"
                   >
-                    <div
-                      className="Select css-1yznv6y-MultiSelect css-12eevnk0 has-value is-clearable is-searchable Select--multi"
+                    <Select
+                      arrowRenderer={[Function]}
+                      autosize={true}
+                      backspaceRemoves={true}
+                      backspaceToRemoveMessage="Press backspace to remove {label}"
+                      className="css-1yznv6y-MultiSelect css-sbd3w60"
+                      clearAllText="Clear all"
+                      clearRenderer={[Function]}
+                      clearValueText="Clear value"
+                      clearable={true}
+                      closeOnSelect={true}
+                      deleteRemoves={true}
+                      delimiter=","
+                      disabled={false}
+                      escapeClearsValue={true}
+                      filterOptions={[Function]}
+                      hideErrorMessage={false}
+                      id="id-undefined"
+                      ignoreAccents={true}
+                      ignoreCase={true}
+                      inputProps={Object {}}
+                      isLoading={false}
+                      joinValues={false}
+                      labelKey="label"
+                      matchPos="any"
+                      matchProp="any"
+                      menuBuffer={0}
+                      menuRenderer={[Function]}
+                      multi={true}
+                      noResultsText="No results found"
+                      onBlurResetsInput={true}
+                      onChange={[Function]}
+                      onCloseResetsInput={true}
+                      onSelectResetsInput={true}
+                      openOnClick={true}
+                      optionComponent={[Function]}
+                      options={
+                        Array [
+                          Object {
+                            "actor": Object {
+                              "id": "1",
+                              "name": "Jane Doe",
+                              "type": "user",
+                            },
+                            "label": "Jane Doe",
+                            "searchKey": "janedoe@example.com  Jane Doe",
+                            "value": "user:1",
+                          },
+                          Object {
+                            "actor": Object {
+                              "id": "2",
+                              "name": "John Smith",
+                              "type": "user",
+                            },
+                            "label": "John Smith",
+                            "searchKey": "johnsmith@example.com  John Smith",
+                            "value": "user:2",
+                          },
+                        ]
+                      }
+                      pageSize={5}
+                      placeholder="Add Owners"
+                      removeSelected={true}
+                      required={false}
+                      rtl={false}
+                      scrollMenuIntoView={true}
+                      searchable={true}
+                      simpleValue={false}
+                      style={
+                        Object {
+                          "width": 200,
+                        }
+                      }
+                      tabSelectsValue={true}
+                      trimFilter={true}
+                      value={
+                        Array [
+                          Object {
+                            "actor": Object {
+                              "id": "1",
+                              "name": "Jane Doe",
+                              "type": "user",
+                            },
+                            "label": "Jane Doe",
+                            "searchKey": "janedoe@example.com  Jane Doe",
+                            "value": "user:1",
+                          },
+                        ]
+                      }
+                      valueComponent={[Function]}
+                      valueKey="value"
                     >
                       <div
-                        className="Select-control"
-                        onKeyDown={[Function]}
-                        onMouseDown={[Function]}
-                        onTouchEnd={[Function]}
-                        onTouchMove={[Function]}
-                        onTouchStart={[Function]}
-                        style={
-                          Object {
-                            "width": 200,
-                          }
-                        }
+                        className="Select css-1yznv6y-MultiSelect css-sbd3w60 has-value is-clearable is-searchable Select--multi"
                       >
-                        <span
-                          className="Select-multi-value-wrapper"
-                          id="react-select-3--value"
-                        >
-                          <ValueComponent
-                            disabled={false}
-                            id="react-select-3--value-0"
-                            instancePrefix="react-select-3-"
-                            key="value-0-user:1"
-                            onClick={null}
-                            onRemove={[Function]}
-                            placeholder="Add Owners"
-                            value={
-                              Object {
-                                "actor": Object {
-                                  "id": "1",
-                                  "name": "Jane Doe",
-                                  "type": "user",
-                                },
-                                "label": "Jane Doe",
-                                "searchKey": "janedoe@example.com  Jane Doe",
-                                "value": "user:1",
-                              }
+                        <div
+                          className="Select-control"
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchMove={[Function]}
+                          onTouchStart={[Function]}
+                          style={
+                            Object {
+                              "width": 200,
                             }
+                          }
+                        >
+                          <span
+                            className="Select-multi-value-wrapper"
+                            id="react-select-3--value"
                           >
-                            <a
-                              onClick={[Function]}
-                            >
-                              <ActorAvatar
-                                actor={
-                                  Object {
+                            <ValueComponent
+                              disabled={false}
+                              id="react-select-3--value-0"
+                              instancePrefix="react-select-3-"
+                              key="value-0-user:1"
+                              onClick={null}
+                              onRemove={[Function]}
+                              placeholder="Add Owners"
+                              value={
+                                Object {
+                                  "actor": Object {
                                     "id": "1",
                                     "name": "Jane Doe",
                                     "type": "user",
-                                  }
+                                  },
+                                  "label": "Jane Doe",
+                                  "searchKey": "janedoe@example.com  Jane Doe",
+                                  "value": "user:1",
                                 }
-                                size={28}
+                              }
+                            >
+                              <a
+                                onClick={[Function]}
                               >
-                                <Avatar
-                                  hasTooltip={true}
-                                  size={28}
-                                  user={
+                                <ActorAvatar
+                                  actor={
                                     Object {
-                                      "email": "janedoe@example.com",
                                       "id": "1",
                                       "name": "Jane Doe",
-                                      "username": "foo@example.com",
+                                      "type": "user",
                                     }
                                   }
+                                  size={28}
                                 >
-                                  <UserAvatar
-                                    gravatar={true}
+                                  <Avatar
                                     hasTooltip={true}
                                     size={28}
                                     user={
@@ -1145,132 +1230,146 @@ exports[`RuleBuilder renders with suggestions renders 1`] = `
                                       }
                                     }
                                   >
-                                    <BaseAvatar
+                                    <UserAvatar
                                       gravatar={true}
-                                      gravatarId="janedoe@example.com"
                                       hasTooltip={true}
-                                      letterId="janedoe@example.com"
                                       size={28}
-                                      style={Object {}}
-                                      title="Jane Doe"
-                                      tooltip="Jane Doe (janedoe@example.com)"
-                                      type="gravatar"
+                                      user={
+                                        Object {
+                                          "email": "janedoe@example.com",
+                                          "id": "1",
+                                          "name": "Jane Doe",
+                                          "username": "foo@example.com",
+                                        }
+                                      }
                                     >
-                                      <Tooltip
-                                        disabled={false}
-                                        title="Jane Doe (janedoe@example.com)"
+                                      <BaseAvatar
+                                        gravatar={true}
+                                        gravatarId="janedoe@example.com"
+                                        hasTooltip={true}
+                                        letterId="janedoe@example.com"
+                                        size={28}
+                                        style={Object {}}
+                                        title="Jane Doe"
+                                        tooltip="Jane Doe (janedoe@example.com)"
+                                        type="gravatar"
                                       >
-                                        <span
-                                          className="tip avatar"
-                                          style={
-                                            Object {
-                                              "height": "28px",
-                                              "width": "28px",
-                                            }
-                                          }
+                                        <Tooltip
+                                          disabled={false}
                                           title="Jane Doe (janedoe@example.com)"
                                         >
-                                          <img
-                                            onError={[Function]}
-                                            onLoad={[Function]}
-                                            src="undefined/avatar/e1f3994f2632af3d1c8c2dcc168a10e6?d=blank&s=32"
-                                          />
-                                        </span>
-                                      </Tooltip>
-                                    </BaseAvatar>
-                                  </UserAvatar>
-                                </Avatar>
-                              </ActorAvatar>
-                            </a>
-                          </ValueComponent>
-                          <AutosizeInput
-                            aria-activedescendant="react-select-3--value"
-                            aria-expanded="false"
-                            aria-haspopup="false"
-                            aria-owns=""
-                            className="Select-input"
-                            id="id-undefined"
-                            injectStyles={true}
-                            minWidth="5"
-                            onBlur={[Function]}
-                            onChange={[Function]}
-                            onFocus={[Function]}
-                            required={false}
-                            role="combobox"
-                            value=""
-                          >
-                            <div
+                                          <span
+                                            className="tip avatar"
+                                            style={
+                                              Object {
+                                                "height": "28px",
+                                                "width": "28px",
+                                              }
+                                            }
+                                            title="Jane Doe (janedoe@example.com)"
+                                          >
+                                            <img
+                                              onError={[Function]}
+                                              onLoad={[Function]}
+                                              src="undefined/avatar/e1f3994f2632af3d1c8c2dcc168a10e6?d=blank&s=32"
+                                            />
+                                          </span>
+                                        </Tooltip>
+                                      </BaseAvatar>
+                                    </UserAvatar>
+                                  </Avatar>
+                                </ActorAvatar>
+                              </a>
+                            </ValueComponent>
+                            <AutosizeInput
+                              aria-activedescendant="react-select-3--value"
+                              aria-expanded="false"
+                              aria-haspopup="false"
+                              aria-owns=""
                               className="Select-input"
-                              style={
-                                Object {
-                                  "display": "inline-block",
-                                }
-                              }
+                              id="id-undefined"
+                              injectStyles={true}
+                              minWidth="5"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onFocus={[Function]}
+                              required={false}
+                              role="combobox"
+                              value=""
                             >
-                              <input
-                                aria-activedescendant="react-select-3--value"
-                                aria-expanded="false"
-                                aria-haspopup="false"
-                                aria-owns=""
-                                id="id-undefined"
-                                onBlur={[Function]}
-                                onChange={[Function]}
-                                onFocus={[Function]}
-                                required={false}
-                                role="combobox"
-                                style={
-                                  Object {
-                                    "boxSizing": "content-box",
-                                    "width": "5px",
-                                  }
-                                }
-                                value=""
-                              />
                               <div
+                                className="Select-input"
                                 style={
                                   Object {
-                                    "height": 0,
-                                    "left": 0,
-                                    "overflow": "scroll",
-                                    "position": "absolute",
-                                    "top": 0,
-                                    "visibility": "hidden",
-                                    "whiteSpace": "pre",
+                                    "display": "inline-block",
                                   }
                                 }
-                              />
-                            </div>
-                          </AutosizeInput>
-                        </span>
-                        <span
-                          aria-label="Clear all"
-                          className="Select-clear-zone"
-                          onMouseDown={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchMove={[Function]}
-                          onTouchStart={[Function]}
-                          title="Clear all"
-                        >
+                              >
+                                <input
+                                  aria-activedescendant="react-select-3--value"
+                                  aria-expanded="false"
+                                  aria-haspopup="false"
+                                  aria-owns=""
+                                  id="id-undefined"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onFocus={[Function]}
+                                  required={false}
+                                  role="combobox"
+                                  style={
+                                    Object {
+                                      "boxSizing": "content-box",
+                                      "width": "5px",
+                                    }
+                                  }
+                                  value=""
+                                />
+                                <div
+                                  style={
+                                    Object {
+                                      "height": 0,
+                                      "left": 0,
+                                      "overflow": "scroll",
+                                      "position": "absolute",
+                                      "top": 0,
+                                      "visibility": "hidden",
+                                      "whiteSpace": "pre",
+                                    }
+                                  }
+                                />
+                              </div>
+                            </AutosizeInput>
+                          </span>
                           <span
-                            className="Select-clear"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "&times;",
+                            aria-label="Clear all"
+                            className="Select-clear-zone"
+                            onMouseDown={[Function]}
+                            onTouchEnd={[Function]}
+                            onTouchMove={[Function]}
+                            onTouchStart={[Function]}
+                            title="Clear all"
+                          >
+                            <span
+                              className="Select-clear"
+                              dangerouslySetInnerHTML={
+                                Object {
+                                  "__html": "&times;",
+                                }
                               }
-                            }
-                          />
-                        </span>
-                        <span
-                          className="Select-arrow-zone"
-                          onMouseDown={[Function]}
-                        >
+                            />
+                          </span>
                           <span
-                            className="icon-arrow-down"
-                          />
-                        </span>
+                            className="Select-arrow-zone"
+                            onMouseDown={[Function]}
+                          >
+                            <span
+                              className="icon-arrow-down"
+                            />
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </Select>
+                    </Select>
+                  </Component>
                 </MultiSelect>
               </MultiSelectField>
             </SelectOwners>
