@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
+import AsyncSelect from 'react-select/lib/Async';
 import styled from 'react-emotion';
 
 import InputField from './inputField';
 
 export default class MultiSelectField extends InputField {
   static propTypes = {
-    options: PropTypes.array.isRequired,
+    async: PropTypes.bool,
+    options: PropTypes.array,
     onChange: PropTypes.func,
     value: PropTypes.any,
   };
@@ -34,19 +36,24 @@ export default class MultiSelectField extends InputField {
   render() {
     return (
       <MultiSelect
+        style={{width: 200, zIndex: 100, overflow: 'visible'}}
+        value={this.state.values}
+        {...this.props}
         id={this.getId()}
         onChange={this.handleChange}
-        value={this.state.values}
         multi={true}
         arrowRenderer={this.renderArrow}
-        style={{width: 200, zIndex: 100, overflow: 'visible'}}
-        {...this.props}
       />
     );
   }
 }
 
-const MultiSelect = styled(Select)`
+const MultiSelect = styled(({async, ...props}) => {
+  if (async) {
+    return <AsyncSelect {...props} />;
+  }
+  return <Select {...props} />;
+})`
   font-size: 15px;
   .Select-control {
     overflow: visible;
