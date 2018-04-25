@@ -30,38 +30,45 @@ export default class OrganizationIntegrations extends AsyncComponent {
 
   getEndpoints() {
     let {orgId} = this.props;
-    return [['config', `/organizations/${orgId}/config/integrations/`]];
+    return [
+      ['config', `/organizations/${orgId}/config/integrations/`],
+      ['organization', `/organizations/${orgId}/`],
+    ];
   }
 
   renderBody() {
     let {orgId, projectId} = this.props;
-
-    const integrations = this.state.config.providers.map(provider => (
-      <PanelItem key={provider.key} align="center">
-        <Box>
-          <PluginIcon size={32} pluginId={provider.key} />
-        </Box>
-        <Box px={2} flex={1}>
-          <ProviderName>
-            <Link
+    let orgFeatures = new Set(this.state.organization.features);
+    const integrations = this.state.config.providers
+      .filter(
+        provider => orgFeatures.has('internal-catchall') || provider.key !== 'github'
+      )
+      .map(provider => (
+        <PanelItem key={provider.key} align="center">
+          <Box>
+            <PluginIcon size={32} pluginId={provider.key} />
+          </Box>
+          <Box px={2} flex={1}>
+            <ProviderName>
+              <Link
+                to={`/settings/${orgId}/${projectId}/integrations/${provider.key}/`}
+                css={{color: theme.gray5}}
+              >
+                {provider.name}
+              </Link>
+            </ProviderName>
+            <TeamName>{provider.metadata.author}</TeamName>
+          </Box>
+          <Box>
+            <Button
+              size="small"
               to={`/settings/${orgId}/${projectId}/integrations/${provider.key}/`}
-              css={{color: theme.gray5}}
             >
-              {provider.name}
-            </Link>
-          </ProviderName>
-          <TeamName>{provider.metadata.author}</TeamName>
-        </Box>
-        <Box>
-          <Button
-            size="small"
-            to={`/settings/${orgId}/${projectId}/integrations/${provider.key}/`}
-          >
-            {t('Configure')}
-          </Button>
-        </Box>
-      </PanelItem>
-    ));
+              {t('Configure')}
+            </Button>
+          </Box>
+        </PanelItem>
+      ));
 
     return (
       <Panel>
