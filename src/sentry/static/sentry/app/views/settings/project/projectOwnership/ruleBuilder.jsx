@@ -2,15 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'react-emotion';
 import {Flex} from 'grid-emotion';
+
 import memberListStore from '../../../../stores/memberListStore';
-import ProjectsStore from '../../../../stores/projectsStore';
 import Button from '../../../../components/buttons/button';
 import SelectInput from '../../../../components/selectInput';
 import TextOverflow from '../../../../components/textOverflow';
 import InlineSvg from '../../../../components/inlineSvg';
 import Input from '../../../../views/settings/components/forms/controls/input';
 import SentryTypes from '../../../../proptypes';
-import {buildUserId, buildTeamId} from '../../../../utils';
 import {addErrorMessage} from '../../../../actionCreators/indicator';
 import SelectOwners from './selectOwners';
 
@@ -23,6 +22,7 @@ const initialState = {
 class RuleBuilder extends React.Component {
   static propTypes = {
     project: SentryTypes.Project,
+    organization: SentryTypes.Organization,
     onAddRule: PropTypes.func,
     urls: PropTypes.arrayOf(PropTypes.string),
     paths: PropTypes.arrayOf(PropTypes.string),
@@ -31,39 +31,6 @@ class RuleBuilder extends React.Component {
   constructor(props) {
     super(props);
     this.state = initialState;
-  }
-
-  mentionableUsers() {
-    return memberListStore.getAll().map(({id, name, email}) => ({
-      value: buildUserId(id),
-      label: name || email,
-      searchKey: `${email}  ${name}`,
-      actor: {
-        type: 'user',
-        id,
-        name,
-      },
-    }));
-  }
-
-  mentionableTeams() {
-    let {project} = this.props;
-    let projectData = ProjectsStore.getBySlug(project.slug);
-
-    if (!projectData) {
-      return [];
-    }
-
-    return projectData.teams.map(team => ({
-      value: buildTeamId(team.id),
-      label: `#${team.slug}`,
-      searchKey: `#${team.slug}`,
-      actor: {
-        type: 'team',
-        id: team.id,
-        name: team.slug,
-      },
-    }));
   }
 
   handleTypeChange = e => {
@@ -101,7 +68,7 @@ class RuleBuilder extends React.Component {
   };
 
   render() {
-    let {urls, paths} = this.props;
+    let {urls, paths, project, organization} = this.props;
     let {type, text, owners} = this.state;
 
     return (
@@ -146,7 +113,8 @@ class RuleBuilder extends React.Component {
           <Divider src="icon-chevron-right" />
           <Flex flex="1" align="center" mr={1}>
             <SelectOwners
-              options={[...this.mentionableTeams(), ...this.mentionableUsers()]}
+              organization={organization}
+              project={project}
               value={owners}
               onChange={this.handleChangeOwners}
             />
